@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import SideBar from '../components/SideBar/SideBar'
+import SideBar from '../components/Sidebar/SideBar'
 import 'leaflet/dist/leaflet.css';
 
 export default function Home() {
