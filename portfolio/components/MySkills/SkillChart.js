@@ -2,7 +2,7 @@
 
 const SkillChart = () => {
     return (
-        <div>
+        <div className="w-full">
             <div className="font-light text-base mb-2">
                 <div className="relative pt-4">
                     <p>Front-End</p>
@@ -36,7 +36,7 @@ const SkillChart = () => {
 
             <div className="relative pt-4 pb-4 grid grid-cols-1 gap-3">
                 <div className="rounded overflow-hidden shadow-lg bg-black">
-                    <div className ="px-6 py-4">
+                    <div className ="px-4 py-4">
                         <div className ="text-2xl font-semibold">Frontend Developer</div>
                         <div className ="text-sm mb-2 font-extralight">Freelance</div>
                         <p className ="text-gray-600 text-base">
@@ -45,7 +45,7 @@ const SkillChart = () => {
                     </div>
                 </div>
                 <div className="rounded overflow-hidden shadow-lg bg-black">
-                    <div className ="px-6 py-4">
+                    <div className ="px-4 py-4">
                         <div className ="text-2xl font-semibold">Backend Developer</div>
                         <div className ="text-sm mb-2 font-extralight">Tata Consultancy Services</div>
                         <p className ="text-gray-600 text-base">

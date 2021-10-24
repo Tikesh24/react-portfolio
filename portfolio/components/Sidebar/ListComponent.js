@@ -8,6 +8,7 @@ import ArtGallery from "../ArtGallery/ArtGallery"
 
 function ListComponent (props) {
     const { component } = props
+
     switch(component) {
         case 'Welcome':
             return <Welcome />
