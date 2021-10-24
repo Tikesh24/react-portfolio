@@ -45,7 +45,7 @@ const workList = [
 
 function Work() {
     return (
-        <div  className="absolute w-auto z-10"> 
+        <div  className="w-auto z-10"> 
             <div className="pl-16 pt-12 pr-16 md:pr-8">
                 <div className="text-2xl xs:text-4xl sm:text-4xl md:text-6xl lg:text-6xl text-pink-500 font-mono">
                     <h2>My work</h2>

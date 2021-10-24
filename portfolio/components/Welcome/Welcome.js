@@ -1,4 +1,3 @@
-import LightAnimation from '../P5Components/LightAnimation';
 import StarAnimation from '../P5Components/StarAnimation';
 import React, { useEffect, useRef, useState } from "react";
 
@@ -8,21 +7,23 @@ const Welcome = () => {
 
     const [width, setWidth] = useState(0);
     const [height, setHeight] = useState(0);
-    
+
     useEffect(() => {
         if(stageCanvasRef.current){
-            console.log(stageCanvasRef);
-            setHeight(stageCanvasRef.current.offsetHeight);
-            setWidth((81*stageCanvasRef.current.offsetParent.offsetWidth)/100);
+            console.log(stageCanvasRef)
+            setWidth(stageCanvasRef.current.offsetWidth)
+            setHeight(stageCanvasRef.current.offsetHeight)
+            const welcome = document.querySelector(".welcome");
+            console.log(welcome)
         }
     }, [stageCanvasRef]);
 
     return (
-        <div className="absolute w-auto z-10" ref={stageCanvasRef}>
-            <div className="welcome relative md:flex-1 min-h-screen min-w-screen top-0">
+        <div className="welcome w-auto min-h-screen z-10" ref={stageCanvasRef}>
+            <div className="relative">
                 <div className="absolute">
                     {/* Background with p5 animation */}
-                    {(width>0)?<StarAnimation width={width} height={height} />:null}
+                {width>0 ?<StarAnimation width={width} height={height} /> : null}
                 </div>
                 <div className="absolute p-12 font-audiowide md:top-24 md:left-20 md:p-0">
                     {/* Text with Hi I'am Tikesh, Developer | Front End | Backend */}
