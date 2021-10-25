@@ -1,8 +1,10 @@
+import { server } from '../../config';
 import StarAnimation from '../P5Components/StarAnimation';
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState , useContext } from "react";
+import { AppContext } from '../../pages';
 
-const Welcome = () => {
-
+const Welcome = ({welcome_page}) => {
+    const { welcome } = useContext(AppContext);
     const stageCanvasRef = useRef(null);
 
     const [width, setWidth] = useState(0);

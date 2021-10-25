@@ -1,9 +1,10 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useContext } from 'react';
 import ParticleAnimation from '../P5Components/ParticleAnimation';
 import SkillChart from './SkillChart';
+import { AppContext } from '../../pages';
 
 function MySkills() {
-
+    const { skills } = useContext(AppContext);
     const stageCanvasRef = useRef(null);
 
     const [width, setWidth] = useState(0);
@@ -11,7 +12,6 @@ function MySkills() {
 
     useEffect(() => {
         if (stageCanvasRef.current) {
-            console.log(stageCanvasRef)
             setWidth(stageCanvasRef.current.offsetWidth)
             setHeight(stageCanvasRef.current.offsetHeight)
         }
@@ -27,23 +27,17 @@ function MySkills() {
             <div className="absolute w-auto h-auto md:h-screen z-10 grid md:grid-cols-1 lg:grid-cols-2 sm:grid-cols-1" ref={stageCanvasRef}>
                 <div className="pl-16 pt-12 pb-12 pr-16 md:pr-8">
                     <div className="text-2xl xs:text-4xl sm:text-4xl md:text-6xl lg:text-6xl text-pink-700 font-mono">
-                        <h2>Skills & <br />Experience</h2>
+                        <h2>{skills.title}</h2>
                     </div>
                     <div className="break-words pt-6 text-base md:text-lg font-light">
-                        <p className="p-2">
-                            Since beginning my journey as a freelance developer nearly 10 years ago, I’ve done remote work for agencies, consulted for startups, and collaborated with talented people to create web products for both business and consumer use.
-                        </p>
-                        <p className="p-2">
-                            I create successful responsive websites that are fast, easy to use, and built with best practices. The main area of my expertise is front-end development, HTML, CSS, JS, building small and medium web apps, custom plugins, features, animations, and coding interactive layouts.
-                        </p>
-                        <p>
-                            I also have full-stack developer experience with popular open-source CMS like (WordPress, Drupal, Magento, Keystone.js and others) .
-                        </p>
+                        {skills.discription.map((val, index)=>(<p key={index} className="p-2">{val.text}</p>))}
                     </div>
-                    <a className="text-pink-700 pt-8 text-base cursor-pointer"> Visit my LinkedIn profile for more details or just contact me.</a>
+                    <a href={skills.link.href} className="text-pink-700 pt-8 text-base cursor-pointer"> 
+                        {skills.link.text}
+                    </a>
                 </div>
                 <div className="pl-16 pt-8 pr-16 md:pl-16 md:pt-12">
-                    <SkillChart />
+                    <SkillChart skills={skills} />
                 </div>
             </div>
         </div>
