@@ -5,7 +5,6 @@ import { AppContext } from '../../pages';
 
 const Welcome = () => {
     const { welcome } = useContext(AppContext);
-    console.log(welcome)
     const stageCanvasRef = useRef(null);
 
     const [width, setWidth] = useState(0);
@@ -30,8 +29,8 @@ const Welcome = () => {
                     {/* Text with Hi I'am Tikesh, Developer | Front End | Backend */}
                     <div className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold">
 
-                        {welcome.title.map((val)=>(
-                            <strong className="flex">
+                        {welcome.title.map((val,index)=>(
+                            <strong className="flex" key={index}>
                                 {val.text.split("").map((letter)=>(
                                     <p className="hover:animate-bounce hover:text-green-300">{letter === '|' ?<span>&nbsp;</span> : letter }</p>
                                 ))}
