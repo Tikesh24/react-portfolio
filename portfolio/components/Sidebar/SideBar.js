@@ -1,12 +1,12 @@
-import Welcome from '../Welcome/Welcome';
 import LOGO_PNG from '../../public/assests/logo2.png'
 import Image from 'next/image';
-import About from '../About/About';
-import ListComponent from './ListComponent';
 import SocialLink from './SocialLink';
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useContext } from "react";
+import { AppContext } from '../../pages';
 
 const SideBar = (props) => {
+    const { user } = useContext(AppContext);
+    const socialURL = user.social;
 
     const [isToggled, setIsToggel] = useState(false);
     const [showComponent, setComponent] = useState("Welcome");
@@ -50,7 +50,7 @@ const SideBar = (props) => {
 
 
     return (
-        <div className="w-full z-400 fixed">
+        <div className="w-full fixed">
             <div className="sidebarparent relative min-h-screen md:flex">
 
                 {/* <!-- mobile menu bar --> */}
@@ -86,8 +86,8 @@ const SideBar = (props) => {
                         <div href="#" className="relative sidebarlogo m-auto h-44 w-44">
                             <Image src={LOGO_PNG}/>
                         </div>
-                        <h1 className="font-extrabold text-2xl">Tikesh Verma</h1>
-                        <h5 className="text-gray-100">Developer</h5>
+                        <h1 className="font-extrabold text-2xl">{user.username}</h1>
+                        <h5 className="text-gray-100">{user.work}</h5>
                     </div>
 
                     {/* <!-- nav --> */}
@@ -108,13 +108,8 @@ const SideBar = (props) => {
                         Contact
                         </a>
                     </nav>
-                    <SocialLink />
+                    <SocialLink social={socialURL} />
                 </div>
-                
-                {/* <!-- content --> */}
-                {/* <div className="contentWrapper z-150 xs:w-full sm:w-full md:pl-64 flex-1 text-2xl font-bold w-full top-0 left-0 absolute justify-end" ref={stageCanvasRef}>
-                   <ListComponent component={showComponent}/> 
-                </div> */}
             </div>
         </div>
     )

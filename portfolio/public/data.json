@@ -1,6 +1,6 @@
 {
     "user": {
-        "user-name": "Tikesh Verma",
+        "username": "Tikesh Verma",
         "work": "Developer",
         "mail": "tikeshverma2494@gmail.com",
         "cordinates": "21.173089, 81.285325",
@@ -13,8 +13,29 @@
         }
     },
     "welcome": {
-        "title": "Hi I'm Tikesh developer",
-        "short-text": "Frontend | Backend"
+        "title": [
+            {
+                "text": "Hi",
+                "hovercolor":"green",
+                "defaultcolour":""
+            },
+            {
+                "text": "I'm|Tikesh",
+                "hovercolor":"green",
+                "defaultcolour":""
+            },
+            {
+                "text": "Full|Stack",
+                "hovercolor":"green",
+                "defaultcolour":""
+            },
+            {
+                "text": "Developer",
+                "hovercolor":"green",
+                "defaultcolour":""
+            }
+        ],
+        "shorttext": "Frontend | Backend"
     },
     "about": {
         "title": "My, Myself & I",
@@ -87,7 +108,7 @@
         ]
     },
     "work": {
-        "title":"My Work",
+        "title": "My Work",
         "worklist": [
             {
                 "id": 1,

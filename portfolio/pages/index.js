@@ -25,7 +25,7 @@ export default function Home({ data }) {
           <SideBar setComponent={setComponent} />
 
           {/* <!-- content --> */}
-          <div className="contentWrapper z-150 md:pl-64 flex-1 w-full absolute justify-end">
+          <div className="contentWrapper  md:pl-64 flex-1 w-full justify-end">
             <ListComponent component={component} />
           </div>
         </div>

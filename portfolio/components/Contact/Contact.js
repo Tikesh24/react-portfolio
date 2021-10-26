@@ -19,7 +19,7 @@ function Contact() {
                 setWidth(stageCanvasRef.current.offsetWidth)
                 setHeight(stageCanvasRef.current.offsetHeight)
             }
-          }, 500);
+          }, 1);
           return () => clearTimeout(timer);
 
     }, [stageCanvasRef]);
@@ -45,17 +45,17 @@ function Contact() {
                     <div className="grid grid-cols-1 gap-2 font-extralight">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2" >
                             <div>
-                                <input className="form-input h-10 block w-full bg-gray-800 border-transparent focus:outline-none focus:border-b-2 focus:border-blue-600 transition duration-500 ease-in" placeholder="   Name" />
+                                <input className="form-input h-10 block w-full bg-gray-800 border-transparent focus:outline-none focus:border-b-2 focus:border-blue-600 transition duration-500 ease-in p-4" placeholder="Name" />
                             </div>
                             <div>
-                                <input className="form-input h-10 block w-full bg-gray-800 border-transparent focus:outline-none focus:border-b-2 focus:border-blue-600 transition duration-500 ease-linear" placeholder="   Email" />
+                                <input className="form-input h-10 block w-full bg-gray-800 border-transparent focus:outline-none focus:border-b-2 focus:border-blue-600 transition duration-500 ease-linear p-4" placeholder="Email" />
                             </div>
                         </div>
                         <div>
-                            <input className="form-input h-10 block w-full bg-gray-800 border-transparent focus:outline-none focus:border-b-2 focus:border-blue-600 transition duration-500 ease-linear" placeholder="   Subject" />
+                            <input className="form-input h-10 block w-full bg-gray-800 border-transparent focus:outline-none focus:border-b-2 focus:border-blue-600 transition duration-500 ease-linear p-4" placeholder="Subject" />
                         </div>
                         <div>
-                            <textarea className="form-input h-48 block w-full bg-gray-800 border-transparent focus:outline-none focus:border-b-2 focus:border-blue-700 transition duration-500 ease-linear" placeholder="   Message" />
+                            <textarea className="form-input h-48 block w-full bg-gray-800 border-transparent focus:outline-none focus:border-b-2 focus:border-blue-700 transition duration-500 ease-linear p-6" placeholder="Message" />
                         </div>
                         <div className="text-right">
                             <button
