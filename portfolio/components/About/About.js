@@ -9,11 +9,14 @@ const About = (props) => {
     const [height, setHeight] = useState(0);
 
     useEffect(() => {
-        if (stageCanvasRef.current) {
-            setWidth(stageCanvasRef.current.offsetWidth)
-            setHeight(stageCanvasRef.current.offsetHeight)
+        function handleResize() {
+            setWidth(window.innerWidth)
+            setHeight(window.innerHeight)
         }
-    }, [stageCanvasRef]);
+        window.addEventListener('resize', handleResize)
+        setWidth(window.innerWidth)
+        setHeight(window.innerHeight)
+    });
 
     return (
         <div className="welcome w-auto min-h-screen z-10 relative">
@@ -45,4 +48,4 @@ const About = (props) => {
     )
 }
 
-export default About;
+export default React.memo(About);
