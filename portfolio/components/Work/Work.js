@@ -66,7 +66,7 @@ function Work() {
                 {/* Background with p5 animation */}
                 {width > 0 ? <ParticleAnimation width={width} height={height} /> : null}
             </div>
-            <div className="w-auto z-10" ref={stageCanvasRef}>
+            <div className="w-auto z-10 pb-8" ref={stageCanvasRef}>
                 <div className="pl-16 pt-12 pr-16 md:pr-8">
                     <div className="text-2xl xs:text-4xl sm:text-4xl md:text-6xl lg:text-6xl text-pink-500 font-mono">
                         <h2>{work.title}</h2>

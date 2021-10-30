@@ -11,17 +11,14 @@ function Contact() {
     const [height, setHeight] = useState(0);
 
     useEffect(() => {
-
         const timer = setTimeout(() => {
-            console.log('This will run after 1 second!')
             if (stageCanvasRef.current) {
-                console.log(stageCanvasRef)
                 setWidth(stageCanvasRef.current.offsetWidth)
-                setHeight(stageCanvasRef.current.offsetHeight)
+                setHeight(stageCanvasRef.current.scrollHeight)
             }
-          }, 1);
+            console.log(stageCanvasRef);
+          }, 500);
           return () => clearTimeout(timer);
-
     }, [stageCanvasRef]);
 
     return (
@@ -31,7 +28,7 @@ function Contact() {
                 {width > 0 && height > 0? <CircleAnimation width={width} height={height} /> : null}
             </div>
 
-            <div className="absolute w-auto h-auto md:h-screen z-10 grid md:grid-cols-1 lg:grid-cols-2 sm:grid-cols-1 pb-4" ref={stageCanvasRef}>
+            <div className="absolute w-auto md:h-screen z-10 grid md:grid-cols-1 lg:grid-cols-2 sm:grid-cols-1 pb-4" ref={stageCanvasRef}>
                 <div className="pl-16 pt-12 pb-16 pr-16 md:pr-8">
                     <div className="text-2xl xs:text-4xl sm:text-4xl md:text-6xl lg:text-6xl text-pink-700 font-mono">
                         <h2>Contact me</h2>
