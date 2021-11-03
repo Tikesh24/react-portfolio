@@ -50,11 +50,11 @@ const SideBar = (props) => {
 
 
     return (
-        <div className="w-full fixed">
-            <div className="sidebarparent relative min-h-screen md:flex">
+        <div className="fixed z-1">
+            <div className="sidebarparent relative md:flex">
 
                 {/* <!-- mobile menu bar --> */}
-                <div className="bg-transparent text-gray-100 flex justify-between md:hidden">
+                <div className="bg-transparent text-gray-100 flex justify-between md:hidden w-screen">
                     {/* <!-- logo --> */}
                     <a href="#" className="block p-4" onClick={()=>setComponent('Welcome')}>
                         <Image width="25" height="25" src={LOGO_PNG}/>
@@ -80,7 +80,7 @@ const SideBar = (props) => {
                 </div>
 
                 {/* <!-- sidebar --> */}
-                <div className="z-200 sidebar bg-[#141414] text-blue-100 w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
+                <div className="z-200 sidebar min-h-screen  bg-[#141414] text-blue-100 w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
                     {/* <!-- logo --> */}
                     <div className="m-auto text-center sm:block md:block lg:block cur"  onClick={(e)=>callComponent(e,'Welcome')}>
                         <div href="#" className="relative sidebarlogo m-auto h-44 w-44">

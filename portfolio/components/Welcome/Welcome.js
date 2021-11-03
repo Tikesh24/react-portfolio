@@ -11,12 +11,9 @@ const Welcome = () => {
     const [height, setHeight] = useState(0);
 
     useEffect(() => {
-        if(stageCanvasRef.current){
-            console.log(stageCanvasRef)
-            setWidth(stageCanvasRef.current.offsetWidth)
-            setHeight(stageCanvasRef.current.offsetHeight)
-        }
-    }, [stageCanvasRef]);
+        setWidth(stageCanvasRef.current.scrollWidth)
+        setHeight(stageCanvasRef.current.scrollHeight)
+    });
 
     return (
         <div className="welcome w-auto min-h-screen z-10" ref={stageCanvasRef}>

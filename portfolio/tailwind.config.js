@@ -9,6 +9,11 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     zIndex: {
+      '1':1,
+      '2':2,
+      '3':3,
+      '4':4,
+      '5':5,
       '100': 100,
       '150':150,
       '200':200,

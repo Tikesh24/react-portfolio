@@ -9,19 +9,17 @@ const About = (props) => {
     const [height, setHeight] = useState(0);
 
     useEffect(() => {
-        if (stageCanvasRef.current) {
-            setWidth(stageCanvasRef.current.offsetWidth)
-            setHeight(stageCanvasRef.current.offsetHeight)
-        }
-    }, [stageCanvasRef]);
+        setWidth(stageCanvasRef.current.scrollWidth)
+        setHeight(stageCanvasRef.current.scrollHeight)
+    });
 
     return (
-        <div className="welcome w-auto min-h-screen z-10 relative">
+        <div className="welcome w-auto min-h-screen z-10 relative" ref={stageCanvasRef}>
             <div className="absolute">
                 {/* Background with p5 animation */}
                 {width > 0 ? <ParticleAnimation width={width} height={height} /> : null}
             </div>
-            <div className="absolute w-auto h-auto md:h-screen z-10 grid md:grid-cols-1 lg:grid-cols-2 sm:grid-cols-1" ref={stageCanvasRef}>
+            <div className="absolute w-auto h-auto md:h-screen z-10 grid md:grid-cols-1 lg:grid-cols-2 sm:grid-cols-1" >
                 <div className="pl-16 pt-12 pr-16 md:pr-8">
                     <div className="text-2xl xs:text-4xl sm:text-4xl md:text-6xl lg:text-6xl text-pink-700 font-mono">
                         <h2>My, Myself & I</h2>
