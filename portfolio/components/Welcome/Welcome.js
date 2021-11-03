@@ -16,7 +16,7 @@ const Welcome = () => {
     });
 
     return (
-        <div className="welcome w-auto min-h-screen z-10" ref={stageCanvasRef}>
+        <div className="welcome w-auto min-h-screen z-10"  ref={stageCanvasRef}>
             <div className="relative">
                 <div className="absolute">
                     {/* Background with p5 animation */}
@@ -28,8 +28,8 @@ const Welcome = () => {
 
                         {welcome.title.map((val,index)=>(
                             <strong className="flex" key={index}>
-                                {val.text.split("").map((letter)=>(
-                                    <p className="hover:animate-bounce hover:text-green-300">{letter === '|' ?<span>&nbsp;</span> : letter }</p>
+                                {val.text.split("").map((letter,index)=>(
+                                    <p key={index} className="hover:animate-bounce hover:text-green-300">{letter === '|' ?<span>&nbsp;</span> : letter }</p>
                                 ))}
                             </strong>
                         ))}

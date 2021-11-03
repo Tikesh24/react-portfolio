@@ -10,16 +10,17 @@ const Sketch = dynamic(
 );
 
 
-const particles = [];
-
+let particles = [];
 const HoverAnimation = (props) => {
     const [width, setWidth] = useState(props.width);
     const [height, setHeight] = useState(props.height);
     console.log(width +" "+ height);
 
 	const setup = (p5, canvasParentRef) => {
+        particles = [];
         p5.createCanvas(width, height).parent(canvasParentRef);
-        const particlesLength = Math.min(Math.floor(window.innerWidth / 10), 100);
+        let minWeight = Math.min(window.innerHeight, window.innerWidth);
+        const particlesLength = Math.min(Math.floor(minWeight / 10), 100);
         for(let i=0; i<particlesLength; i++) {
             particles.push(new Particle(p5));
         }

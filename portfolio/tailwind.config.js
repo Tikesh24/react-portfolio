@@ -3,8 +3,8 @@ module.exports = {
   purge: [
     // './src/**/*.html',
     //  './src/**/*.js',
-     './pages/**/*.{js,ts,jsx,tsx}',
-     './components/**/*.{js,ts,jsx,tsx}'
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}'
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -15,11 +15,11 @@ module.exports = {
       '4':4,
       '5':5,
       '100': 100,
-      '150':150,
-      '200':200,
-      '250':250,
-      '300':300,
-      '400':400,
+      '150': 150,
+      '200': 200,
+      '250': 250,
+      '300': 300,
+      '400': 400,
       '1000': 1000,
     },
     screens: {

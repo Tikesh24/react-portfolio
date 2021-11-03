@@ -19,8 +19,8 @@ const MapLeaflet = () => {
     });
     
     return (
-            <div className="relative">
-                <div className="h-96 w-full absolute z-100"/>
+            <div className="relative z-1">
+                <div className="h-full w-full absolute"/>
                 <MapContainer center={position} zoom={13} scrollWheelZoom={false} className="h-96">
                     <TileLayer
                         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
