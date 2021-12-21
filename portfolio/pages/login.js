@@ -1,5 +1,5 @@
 // // auth.tsx
-// import React from "react";
+import React from "react";
 // import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 // import auth from "../firebase/clientApp";
 
@@ -12,14 +12,14 @@
 //   signInOptions: [auth.GoogleAuthProvider.PROVIDER_ID],
 // };
 
-// function SignInScreen() {
-//   return (
-//     <div>
-//       <h1>Pineapple Login</h1>
-//       <p>Please sign-in:</p>
-//       <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={auth()} />
-//     </div>
-//   );
-// }
+function SignInScreen() {
+  return (
+    <div>
+      <h1>Pineapple Login</h1>
+      <p>Please sign-in:</p>
+      {/* <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={auth()} /> */}
+    </div>
+  );
+}
 
-// export default SignInScreen;
+export default SignInScreen;

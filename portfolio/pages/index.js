@@ -7,8 +7,8 @@ import { server } from '../config';
 import { createContext } from 'react';``
 export const AppContext = createContext();
 
-import { firebase } from "../firebase/clientApp";
-import { useAuthState } from "react-firebase-hooks/auth";
+//import { firebase } from "../firebase/clientApp";
+//import { useAuthState } from "react-firebase-hooks/auth";
 
 
 export default function Home({ data }) {
