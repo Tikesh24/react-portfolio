@@ -11,17 +11,12 @@ const Welcome = () => {
     const [height, setHeight] = useState(0);
 
     useEffect(() => {
-        function handleResize() {
-            setWidth(window.innerWidth)
-            setHeight(window.innerHeight)
-        }
-        window.addEventListener('resize', handleResize)
-        setWidth(window.innerWidth)
-        setHeight(window.innerHeight)
+        setWidth(stageCanvasRef.current.scrollWidth)
+        setHeight(stageCanvasRef.current.scrollHeight)
     });
 
     return (
-        <div className="welcome w-auto min-h-screen z-10" >
+        <div className="welcome w-auto min-h-screen z-10"  ref={stageCanvasRef}>
             <div className="relative">
                 <div className="absolute">
                     {/* Background with p5 animation */}
