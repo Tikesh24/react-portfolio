@@ -16,23 +16,23 @@
         "title": [
             {
                 "text": "Hi",
-                "hovercolor":"green",
-                "defaultcolour":""
+                "hovercolor": "green",
+                "defaultcolour": ""
             },
             {
                 "text": "I'm|Tikesh",
-                "hovercolor":"green",
-                "defaultcolour":""
+                "hovercolor": "green",
+                "defaultcolour": ""
             },
             {
                 "text": "Full|Stack",
-                "hovercolor":"green",
-                "defaultcolour":""
+                "hovercolor": "green",
+                "defaultcolour": ""
             },
             {
                 "text": "Developer",
-                "hovercolor":"green",
-                "defaultcolour":""
+                "hovercolor": "green",
+                "defaultcolour": ""
             }
         ],
         "shorttext": "Frontend | Backend"
@@ -41,31 +41,56 @@
         "title": "My, Myself & I",
         "discription": [
             {
-                "text": "I’m a Front-End Developer located in India. I have a serious passion for UI effects, animations and creating intuitive, dynamic user experiences."
+                "text": "I’m a Full Stack Developer located in India. I have a serious passion for UI effects, animations and creating intuitive, dynamic user experiences."
             },
             {
-                "text": "Well-organised person, problem solver, independent employee with high attention to detail. Fan of HP, outdoor activities, TV series and Art literature."
+                "text": "Well-organised person, problem solver, independent employee with high attention to detail. Potter Head, outdoor activities, TV series and Art literature."
             },
             {
-                "text": "A family person, Interested in the entire frontend spectrum and working on ambitious projects with positive people."
+                "text": "A family person, Interested in the entire frontend and backend spectrum and working on ambitious projects with positive people."
             }
         ],
         "link": {
             "text": "Visit my LinkedIn profile for more details or just contact me.",
             "href": "https://www.linkedin.com/in/tikesh-verma/"
-        }
+        },
+        "skillset": [
+            "React",
+            "Next JS",
+            "Angular",
+            "BootStrap",
+            "TailwindCSS",
+            "CSS3",
+            "Animation",
+            "Interactive",
+            "Designer",
+            "Java",
+            "Spring Boot",
+            "Hibernet",
+            "JPA",
+            "Spring Cloud",
+            "Hibernet",
+            "Python",
+            "Art Work",
+            "Maven",
+            "Git",
+            "Jenkins",
+            "Vercel",
+            "Heroku",
+            "Blender"
+        ]
     },
     "skills": {
         "title": "Skills & Experience",
         "discription": [
             {
-                "text": "Since beginning my journey as a freelance developer nearly 10 years ago, I’ve done remote work for agencies, consulted for startups, and collaborated with talented people to create web products for both business and consumer use."
+                "text": "Since beginning my journey, I initially worked as backend developer nearly 4 years ago, I’ve done remote work for agencies, consulted for startups, and collaborated with talented people to create web products for both business and consumer use."
             },
             {
-                "text": "I create successful responsive websites that are fast, easy to use, and built with best practices. The main area of my expertise is front-end development, HTML, CSS, JS, building small and medium web apps, custom plugins, features, animations, and coding interactive layouts."
+                "text": "I have created successful responsive websites as well as high performance APIs for various products, that are fast, easy to use, and built with best practices. The main area of my expertise is front-end development, HTML, CSS, JS, building small and medium web apps along with good hands-on on building backend services."
             },
             {
-                "text": "I also have full-stack developer experience with popular open-source CMS like (WordPress, Drupal, Magento, Keystone.js and others)."
+                "text": "I also have full-stack developer experience with Java and its related framework."
             }
         ],
         "link": {
@@ -75,35 +100,35 @@
         "skill": [
             {
                 "name": "Front-end",
-                "value": 64,
+                "value": 70,
                 "color": "green"
             },
             {
+                "name": "Angular | ReactJS",
+                "value": 78,
+                "color": "blue"
+            },
+            {
                 "name": "Back-end",
-                "value": 64,
-                "color": "red"
+                "value": 85,
+                "color": "darkred"
             },
             {
                 "name": "Java | Spring boot",
-                "value": 64,
-                "color": "red"
-            },
-            {
-                "name": "Angular | ReactJS",
-                "value": 64,
-                "color": "blue"
+                "value": 90,
+                "color": "purple"
             }
         ],
         "experience": [
             {
-                "designation": "Frontend Developer",
+                "designation": "Full Stack Developer",
                 "company": "Freelance",
-                "discription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Voluptatibus quia, nulla!Maiores et perferendis eaque, exercitationem praesentium nihil."
+                "discription": "Working most of my time as freelancer for various clients, helping and handling various requirement from creating new designs and components to migrating existing one."
             },
             {
-                "designation": "Backend Developer",
-                "company": "Tata Consultancy Services",
-                "discription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Voluptatibus quia, nulla!Maiores et perferendis eaque, exercitationem praesentium nihil."
+                "designation": "Senior Product Developer | ITA",
+                "company": "Digitate | TCS",
+                "discription": "I have started my career as backend developer and now working as full stack developer, managing and handling various capabilities for SAP Automation for ignio(AI Tool)."
             }
         ]
     },
@@ -114,33 +139,41 @@
                 "id": 1,
                 "work": "Clone: Hulu",
                 "date": "Oct 2021",
-                "thumbicon": "NA",
-                "url": "../../public/assests/work/hulu.png",
+                "thumbicon": "/../public/assests/work/hulu2.0.png",
+                "url": "https://hulu-clone-tikesh24.vercel.app/",
                 "discription": "A clone of HULU based on TMDB api and using NextJS, Tailwind and Leaflet."
             },
             {
                 "id": 2,
                 "work": "Clone: MovieDB",
                 "date": "Sep 2021",
-                "thumbicon": "NA",
-                "url": "../../public/assests/work/hulu.png",
+                "thumbicon": "/../public/assests/work/moviehub.png",
+                "url": "https://tikesh24-moviehub.netlify.app/",
                 "discription": "A clone of MovieDB based on TMDB api and ReactJS."
             },
             {
                 "id": 3,
                 "work": "Ideathone: Varys: Game of automata",
                 "date": "Aug 2020",
-                "thumbicon": "NA",
-                "url": "../../public/assests/work/hulu.png",
+                "thumbicon": "/../public/assests/work/varys.png",
+                "url": "https://github.com/Tikesh24/Varys-Game-Of-Automata",
                 "discription": "Created an automation tool capable of recording events, adding image validation and replaying events."
             },
             {
                 "id": 4,
                 "work": "Frelance: Unknown",
                 "date": "Jan 2018 - Sep 2021",
-                "thumbicon": "NA",
+                "thumbicon": "/../public/assests/work/freelance.png",
                 "url": "NA",
                 "discription": "Providing support to client with tech stacks for both back and front end."
+            },
+            {
+                "id": 5,
+                "work": "Wedding Book: For perfect couple",
+                "date": "Dec 2021",
+                "thumbicon": "/../public/assests/work/wedding.png",
+                "url": "https://weddingbook.vercel.app",
+                "discription": "A personized website for bride and groom for wedding day. A perfect template for perfect couple."
             },
             {
                 "id": 5,

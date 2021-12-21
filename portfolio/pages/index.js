@@ -4,10 +4,18 @@ import 'leaflet/dist/leaflet.css';
 import { useState } from 'react';
 import ListComponent from '../components/Sidebar/ListComponent';
 import { server } from '../config';
-import { createContext } from 'react';
+import { createContext } from 'react';``
 export const AppContext = createContext();
 
+import { firebase } from "../firebase/clientApp";
+import { useAuthState } from "react-firebase-hooks/auth";
+
+
 export default function Home({ data }) {
+
+  // console.log(auth)
+  // const [user, loading, error] = useAuthState(firebase.auth());
+  // console.log("Loading:", loading, "|", "Current user:", user);
 
   const { welcome, user, skills, work, about } = data;
 

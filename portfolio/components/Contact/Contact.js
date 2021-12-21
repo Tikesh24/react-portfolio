@@ -4,7 +4,6 @@ import React, { useEffect, useRef, useState } from "react";
 import CircleAnimation from '../P5Components/CircleAnimation';
 
 function Contact() {
-
     const stageCanvasRef = useRef(null);
 
     const [width, setWidth] = useState(0);
@@ -23,7 +22,7 @@ function Contact() {
         event.preventDefault();
         if(isFormValid) { 
             submitForm(name, message, email, subject);
-        } else {alert("Form invalid")}
+        }
     }
 
     const validateFields = (event) => {

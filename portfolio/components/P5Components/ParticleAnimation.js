@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-
 import dynamic from "next/dynamic";
 
 const Sketch = dynamic(
@@ -9,9 +8,9 @@ const Sketch = dynamic(
   { ssr: false }
 );
 
-
 let particles = [];
 const HoverAnimation = (props) => {
+    
     const [width, setWidth] = useState(props.width);
     const [height, setHeight] = useState(props.height);
     console.log(width +" "+ height);
@@ -19,15 +18,18 @@ const HoverAnimation = (props) => {
 	const setup = (p5, canvasParentRef) => {
         particles = [];
         p5.createCanvas(width, height).parent(canvasParentRef);
-        let minWeight = Math.min(window.innerHeight, window.innerWidth);
-        const particlesLength = Math.min(Math.floor(minWeight / 10), 100);
+        let minWeight = Math.min(width, height);
+        let maxWeight = Math.max(width, height);
+        let divient = (maxWeight >= 1500 ? 10 : maxWeight >=500 && maxWeight <= 100 ? 20 : 25);
+        //console.log(divient);
+        const particlesLength = Math.min(Math.floor(minWeight / divient), 100);
         for(let i=0; i<particlesLength; i++) {
             particles.push(new Particle(p5));
         }
 	};
 
 	const draw = (p5) => {
-		p5.background(5);
+		p5.background(10);
         particles.forEach((particle, idx) => {
             particle.update();
             particle.draw();
@@ -40,7 +42,6 @@ const HoverAnimation = (props) => {
             this.pos = p5.createVector(p5.random(width), p5.random(height));
             this.vel = p5.createVector(p5.random(-2, 2), p5.random(-2, 2));
             this.size = 5;
-
 
             this.update = ()=> {
                 this.pos.add(this.vel);

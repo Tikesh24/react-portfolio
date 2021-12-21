@@ -9,7 +9,7 @@ const SkillChart = (props) => {
                     <div key={index} className="relative pt-4">
                         <p>{val.name}</p>
                         <div className="overflow-hidden h-0.5 text-xs flex rounded bg-purple-200">
-                            <div className={`shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-${val.color}-400 w-${val.value} `}>
+                            <div className={`shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center`} style={{background:`${val.color}`, width:`${val.value}%`}}>
                             </div>
                         </div>
                     </div>
