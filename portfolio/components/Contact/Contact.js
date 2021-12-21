@@ -85,7 +85,6 @@ function Contact() {
     }
 
     const resetValues = ()=>{
-
             setName("");
             setSubject("");
             setEmail("");
