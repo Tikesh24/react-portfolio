@@ -60,6 +60,12 @@ function Contact() {
         }
     }
 
+    const resetValues = () => {
+            setName('');
+            setSubject('');
+            setEmail('');
+            setMessage('');
+    }
 
      const submitForm = async (name, message, mail, subject) => {
 
@@ -77,19 +83,14 @@ function Contact() {
                 body: JSON.stringify(postValues)
                });
 
-               resetValues();
+            console.log("Mail sent "+ JSON.stringify(res));  
         } catch(err){
             console.log(err);
         }
-        
+        resetValues();
     }
 
-    const resetValues = ()=>{
-            setName("");
-            setSubject("");
-            setEmail("");
-            setMessage("");
-    }
+
     
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -120,17 +121,17 @@ function Contact() {
                     <div className="grid grid-cols-1 gap-2 font-extralight">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2" >
                             <div>
-                                <input onChange={validateFields} className={"form-input h-10 block w-full bg-gray-800 border-transparent focus:outline-none focus:border-b-2 " + (name.length > 0 ? "focus:border-blue-600" : "focus:border-red-600") + " transition duration-500 ease-in p-4"} name="Name" placeholder="Name" />
+                                <input onChange={validateFields} className={"form-input h-10 block w-full bg-gray-800 border-transparent focus:outline-none focus:border-b-2 " + (name.length > 0 ? "focus:border-blue-600" : "focus:border-red-600") + " transition duration-500 ease-in p-4"} name="Name" placeholder="Name" value={name} />
                             </div>
                             <div>
-                                <input onChange={validateFields} className={"form-input h-10 block w-full bg-gray-800 border-transparent focus:outline-none focus:border-b-2 " + (isMailValid > 0 ? "focus:border-blue-600" : "focus:border-red-600") + " transition duration-500 ease-linear p-4"} name="Email" placeholder="Email"/>
+                                <input onChange={validateFields} className={"form-input h-10 block w-full bg-gray-800 border-transparent focus:outline-none focus:border-b-2 " + (isMailValid > 0 ? "focus:border-blue-600" : "focus:border-red-600") + " transition duration-500 ease-linear p-4"} name="Email" placeholder="Email" value={email} />
                             </div>
                         </div>
                         <div>
-                            <input onChange={validateFields} className={"form-input h-10 block w-full bg-gray-800 border-transparent focus:outline-none focus:border-b-2 " + (subject.length > 0 ? "focus:border-blue-600" : "focus:border-red-600") + " transition duration-500 ease-linear p-4"} name="Subject" placeholder="Subject"  />
+                            <input onChange={validateFields} className={"form-input h-10 block w-full bg-gray-800 border-transparent focus:outline-none focus:border-b-2 " + (subject.length > 0 ? "focus:border-blue-600" : "focus:border-red-600") + " transition duration-500 ease-linear p-4"} name="Subject" placeholder="Subject" value={subject} />
                         </div>
                         <div>
-                            <textarea onChange={validateFields} className={"form-input h-48 block w-full bg-gray-800 border-transparent focus:outline-none focus:border-b-2 " + (message.length > 0 ? "focus:border-blue-600" : "focus:border-red-600") + " transition duration-500 ease-linear p-6"} name="Message" placeholder="Message" />
+                            <textarea onChange={validateFields} className={"form-input h-48 block w-full bg-gray-800 border-transparent focus:outline-none focus:border-b-2 " + (message.length > 0 ? "focus:border-blue-600" : "focus:border-red-600") + " transition duration-500 ease-linear p-6"} name="Message" placeholder="Message" value={message} />
                         </div>
                         <div className="text-right">
                             <input className={"bg-transparent border text-white " + (isFormValid ? "border-blue-500 hover:bg-blue-400" : "border-red-500 hover:bg-red-700") + " hover:text-black transition duration-300 ease-linear tracking-widest uppercase text-sm px-6 py-3 shadow"} type="submit" value="Send Message!" />
