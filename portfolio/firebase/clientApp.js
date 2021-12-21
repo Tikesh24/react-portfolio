@@ -1,4 +1,4 @@
-// import { firebase } from "firebase/app"
+import { firebase } from "firebase/app"
 // import "firebase/auth";
 // import "firebase/firestore";
 
@@ -18,4 +18,4 @@
 //     console.log(auth)
 //   }
   
-//   export default firebase;
+export default firebase;
