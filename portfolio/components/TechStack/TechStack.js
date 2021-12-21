@@ -26,8 +26,8 @@ const TechStack = (props) => {
         radius: calcRadius,
           // animation speed
         // slow, normal, fast
-        maxSpeed: 'fast',
-        initSpeed: 'fast',
+        // maxSpeed: 'fast',
+        // initSpeed: 'fast',
 
         // 0 = top
         // 90 = left
