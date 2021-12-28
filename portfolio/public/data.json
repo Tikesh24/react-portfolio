@@ -139,7 +139,7 @@
                 "id": 1,
                 "work": "Clone: Hulu",
                 "date": "Oct 2021",
-                "thumbicon": "/../public/assests/work/hulu2.0.png",
+                "thumbicon": "assests/work/hulu2.0.png",
                 "url": "https://hulu-clone-tikesh24.vercel.app/",
                 "discription": "A clone of HULU based on TMDB api and using NextJS, Tailwind and Leaflet."
             },
@@ -147,7 +147,7 @@
                 "id": 2,
                 "work": "Clone: MovieDB",
                 "date": "Sep 2021",
-                "thumbicon": "/../public/assests/work/moviehub.png",
+                "thumbicon": "assests/work/moviehub.png",
                 "url": "https://tikesh24-moviehub.netlify.app/",
                 "discription": "A clone of MovieDB based on TMDB api and ReactJS."
             },
@@ -155,7 +155,7 @@
                 "id": 3,
                 "work": "Ideathone: Varys: Game of automata",
                 "date": "Aug 2020",
-                "thumbicon": "/../public/assests/work/varys.png",
+                "thumbicon": "assests/work/varys.png",
                 "url": "https://github.com/Tikesh24/Varys-Game-Of-Automata",
                 "discription": "Created an automation tool capable of recording events, adding image validation and replaying events."
             },
@@ -163,7 +163,7 @@
                 "id": 4,
                 "work": "Frelance: Unknown",
                 "date": "Jan 2018 - Sep 2021",
-                "thumbicon": "/../public/assests/work/freelance.png",
+                "thumbicon": "assests/work/freelance.png",
                 "url": "NA",
                 "discription": "Providing support to client with tech stacks for both back and front end."
             },
@@ -171,7 +171,7 @@
                 "id": 5,
                 "work": "Wedding Book: For perfect couple",
                 "date": "Dec 2021",
-                "thumbicon": "/../public/assests/work/wedding.png",
+                "thumbicon": "assests/work/wedding.png",
                 "url": "https://weddingbook.vercel.app",
                 "discription": "A personized website for bride and groom for wedding day. A perfect template for perfect couple."
             },
@@ -179,8 +179,8 @@
                 "id": 5,
                 "work": "Full Time: Digitate",
                 "date": "Current",
-                "thumbicon": "/../public/assests/work/digitate.png",
-                "url": "../../public/assests/work/hulu.png",
+                "thumbicon": "assests/work/digitate.png",
+                "url": "https://digitate.com",
                 "discription": "Working as full stack developer, automating different areas of SAP Basis."
             }
         ]
